@@ -1,0 +1,208 @@
+/*
+ *  Copyright (c) Lesosoftware 2021
+ *  https://github.com/leso-kn
+ */
+
+/*
+ *  Typography
+ */
+
+:root
+{
+    font-family: var(--markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+}
+
+p
+{
+    text-align: justify;
+    line-height: 1.9em;
+}
+
+/*
+ *  Basics
+ */
+
+foot
+{
+    /* Foot Note */
+    display: block;
+    font-size: .7em;
+    line-height: normal;
+    
+    border-top: 2px solid #eee;
+    padding-top: 2px;
+}
+
+/*
+ *  Headlines
+ */
+
+body > h1:first-of-type
+{
+    display:inline-block;
+    margin-left: 50%;
+    margin-top: 42vh;
+    transform: translate(-50%, -50%);
+}
+
+body > h2:first-of-type
+{
+    text-align:center;
+    margin: 0 15vw;
+}
+
+/*
+ *  Table Of Contents
+ */
+
+body > ul:first-of-type
+{
+    line-height: 2em;
+    display:inline-block;
+    overflow:hidden;
+}
+
+body > ul:first-of-type li
+{
+    display:flex;
+}
+
+body > ul:first-of-type li pn
+{
+    order: 3;
+}
+
+body > ul:first-of-type gray ~ pn
+{
+    color: gray;
+}
+
+body > ul:first-of-type li:after
+{
+    content: '';
+    border-bottom: 1.5px dotted;
+    border-bottom-color: #aaa;
+    flex-grow: 1;
+    order: 2;
+    height: 1.3em;
+    margin: 0 .5em;
+    min-width: 1em;
+}
+
+/*
+ *  Elements / Misc
+ */
+
+pb
+{
+    /* Page Break */
+    display: block;
+}
+
+info
+{
+    /* Page 1, Infobox */
+    display: block;
+    position:absolute;
+    margin: 0 20vw;
+    margin-bottom: 4em;
+
+    white-space:pre;
+
+    bottom: 0;
+}
+
+sup
+{
+    display:inline-block;
+    font-size:.8em;
+    margin-top:-1em;
+}
+
+blockquote
+{
+    border-left-color: #29f;
+}
+
+/*
+ *  Preview Configuration
+ */
+
+@media screen {
+    pb
+    {
+        margin: 2cm calc(-2cm - 2em);
+        margin-top:10vh;
+        padding-bottom: 1cm;
+    }
+    foot
+    {
+        padding: 2cm 0;
+        padding-top: 2px;
+
+        margin-top: 5cm;
+        margin-bottom:3cm;
+    }
+    foot:after,
+    pb:after
+    {
+        /* Visual page break for preview */
+        display:block;
+        position: absolute;
+        content:'';
+        height: 1cm;
+        width:calc(100vw);
+        background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.2) 50%);
+    }
+    foot:after
+    {
+        margin: 2cm calc(-2cm - 3em);
+    }
+
+    body
+    {
+        overflow-x: hidden;
+        padding: 2cm;
+        margin:0;
+    }
+
+    /* Page 1, Preview large visual page break */
+    body > p:first-of-type pb,
+    body > p:nth-of-type(2) pb
+    {
+        margin-top: 50vh;
+    }
+}
+
+/*
+ *  Print (pdf) Configuration
+ */
+
+@media print {
+    body
+    {
+        color: #223;
+    }
+    a
+    {
+        color: #337;
+    }
+    hr
+    {
+        border-color: #eee;
+    }
+    pre
+    {
+        white-space: pre-wrap;
+    }
+    pb { page-break-after: always; }
+    foot
+    {
+        page-break-before: always;
+
+        position: relative;
+        bottom: .5em;
+        transform: translateY(-100%);
+        margin-bottom: calc(-1cm - 0.2em);
+    }
+}

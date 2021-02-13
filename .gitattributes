@@ -1,3 +1,0 @@
-
-# Tell Github/Gitlab to associate *.htm files with markdown
-*.htm linguist-language=Markdown

@@ -1,18 +1,20 @@
-[![Online Demo](https://img.shields.io/static/v1?label=Demo&message=View%20in%20Browser&color=blue)](https://lesosoftware.com/paged-markdown-demo)
+[![Online Demo](https://img.shields.io/static/v1?label=Demo&message=View%20in%20Browser&color=blueviolet)](https://lesosoftware.com/paged-markdown-doc-demo.pdf)
 
 # Paged Markdown
 
-Paged Markdown (or `paged.md` for short) is a modern approach to creating slide-based presentations.
+## \> Text Document Flavor
 
-Besides presentations, there is also a dialect for creating text documents with multiple pages (paper, essay, etc.) on [this branch](https://github.com/leso-kn/paged-markdown/tree/text-document).
+This branch contains a lightweight dialect of Paged Markdown, specialized for creating text documents with multiple pages (paper, essay, etc.).
+
+Check out the [main branch](https://github.com/leso-kn/paged-markdown) if you're interested in creating slide-based presentations in Markdown.
 
 ## About
 
-As the name suggests, `paged.md` is based on [Markdown](https://daringfireball.net/projects/markdown/).
+This is a small extension for the [Markdown](https://daringfireball.net/projects/markdown/) language.
 
-Unlike with classical presentation software, there's no official editor for creating slides (though [Visual Studio Code](https://code.visualstudio.com/) is recommended). In fact, any text editor can be used to create and edit Paged Markdown presentations.
+Based on a single css stylesheet, it adds the ability to control page breaks in Markdown documents and provides a bunch of new elements that are common in essays and scientific papers (foot notes, table of contents, title page etc.).
 
-The result can be displayed (presented) in any modern browser at any stage of the creation process, meaning there's no need to convert or render anything between editing and presenting (presentation files already have the .htm file extension).
+Just like any regular Markdown document, the result can be converted to HTML and PDF (see the [Printing and PDF export](#printing-and-pdf-export) section below).
 
 ## Getting started
 
@@ -21,48 +23,25 @@ For editing, it is recommended to use [Visual Studio Code](https://code.visualst
 1. Download or clone this repository
 2. Rename the folder to the desired name of your presentation
 3. Open the folder in Visual Studio Code
-   * Alternatively: Open `presentation.htm` in any text editor of your choice
+   * Alternatively: Open `document.md` in any text editor of your choice
 
-### Quick tutorial
+### Reference
 
-* To preview or display your presentation, open it inside any modern browser (Firefox, Chrome etc.)
-* In Visual Studio Code, you can use the Markdown Preview feature directly
-* Use regular Markdown to create your presentation
-* As usual with Markdown, HTML can be used as well in the entire document
-  * This allows for more flexible formatting
-* Slides are arranged inside `<page>` tags
-
-> To switch between slides in Visual Studio Code, edit the number inside `page:nth-of-type(...)` in the `<style>` tag in the very end of your `presentation.htm`.
+The initial [document.md](document.md) contains a quick feature reference.
 
 ### Design
 
-You can change colors and adjust / extend the design of your slides by customizing `design.css` to your needs and taste.
+Because this flavor of Paged Markdown is much more lightweight than the version for presentations, it was decided to put all design- and layout definitions into a single CSS file: `doc.css`. It contains typography settings, page layout and definitions of custom elements.
 
-There is also `logic.css`. Feel free to look around in here too, this file is supposed to handle the more generic slide design like animations and the base definition of a `<page>` (slide) tag.
+You can customize and extend this file to your needs and taste.
 
-## FAQ
+## Printing and PDF export
 
-### Visual Studio Code
+It is usually very easy to print Paged Markdown documents, or to export them as PDF, using a Markdown capable editor.
 
-**`"Some content has been disabled in this document"`**
+For example, in [Visual Studio Code](https://code.visualstudio.com/), it is possible to convert Markdown documents to HTML using the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension. The HTML file can then be opened in any modern browser like Firefox or Chrome, where you can use the "Print Page" function, to print the document, or save it as PDF file.
 
-By default, the Markdown preview of Visual Studio Code blocks external urls.
-
-This is actually a really handy behaviour in the case of `paged.md`: The javascript logic, that provides keybindings and markdown rendering inside the web browser, is not needed during editing.
-
-Since it is loaded from an external server ([link](https://lesosoftware.com/paged.md)), Code automatically prevents the script from being executed.
-
-The warning itself can just be hidden by clicking on it and selecting _'Disable preview security warning in this workspace'_.
-
-## Limitations
-
-A common usecase with slides is to export them to the pdf format.
-
-This _is_ possible with Paged Markdown presentations, but the way to do it at the moment is not exactly beautiful:
-
-To convert your slides to pdf, simply open the presentation in your web browser and navigate to the first slide. Press `CTRL+P` to print the current page and select "Save to PDF". You will need to repeat this step for each slide (for filenames, choose a new folder and put something like `01.pdf`, `02.pdf`, `...`).
-
-After saving all slides, you can use any PDF-merge tool to combine the files into a single pdf document. On Linux, there's also the `pdfunite` utility, that can be used for this. Nevertheless, this is certainly not a nice way to do it.
+Manual line breaks you defined in your document should be considered and displayed by the print preview of the web browser.
 
 ---
 
