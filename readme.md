@@ -1,5 +1,7 @@
 [![Online Demo](https://img.shields.io/static/v1?label=Demo&message=View%20in%20Browser&color=blue)](https://lesosoftware.com/paged-markdown-demo)
 
+![banner animation](https://user-images.githubusercontent.com/7886606/108355215-cec16980-71ea-11eb-8f7e-fe90e9c1cb11.gif)
+
 # Paged Markdown
 
 Paged Markdown (or `paged.md` for short) is a modern approach to creating slide-based presentations.
