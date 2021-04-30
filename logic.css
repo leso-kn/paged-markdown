@@ -3,13 +3,13 @@
  *  https://github.com/leso-kn
  */
 
-:root
+:root, body
 {
     cursor: default;
     user-select: none;
 
     /* fine tune */
-    --markdown-line-height: 5vw;
+    line-height: 5vw;
 }
 
 /*
