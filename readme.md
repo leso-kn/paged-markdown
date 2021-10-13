@@ -41,7 +41,7 @@ It is usually very easy to print Paged Markdown documents, or to export them as 
 
 For example, in [Visual Studio Code](https://code.visualstudio.com/), it is possible to convert Markdown documents to HTML using the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension. The HTML file can then be opened in any modern browser like Firefox or Chrome, where you can use the "Print Page" function, to print the document, or save it as PDF file.
 
-Manual line breaks you defined in your document should be considered and displayed by the print preview of the web browser.
+Manual page breaks you defined in your document should be considered and displayed by the print preview of the web browser.
 
 ---
 
