@@ -60,11 +60,20 @@ body > ul:first-of-type
     line-height: 2em;
     display:inline-block;
     overflow:hidden;
+
+    padding-left: 0;
 }
 
 body > ul:first-of-type li
 {
     display:flex;
+    flex-wrap: wrap;
+}
+
+body > ul:first-of-type ul
+{
+    order: 4;
+    flex-basis: 100%;
 }
 
 body > ul:first-of-type li pn
