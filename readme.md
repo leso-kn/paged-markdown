@@ -64,7 +64,7 @@ This _is_ possible with Paged Markdown presentations, but the way to do it at th
 
 To convert your slides to pdf, simply open the presentation in your web browser and navigate to the first slide. Press `CTRL+P` to print the current page and select "Save to PDF". You will need to repeat this step for each slide (for filenames, choose a new folder and put something like `01.pdf`, `02.pdf`, `...`).
 
-After saving all slides, you can use any PDF-merge tool to combine the files into a single pdf document. On Linux, there's also the `pdfunite` utility, that can be used for this. Nevertheless, this is certainly not a nice way to do it.
+After saving all slides, you can use any PDF-merge tool to combine the files into a single pdf document. On Linux, there's also the `pdfunite` utility, that can be used for this. Nevertheless, this is certainly not a nice way to do it and is most likely to be improved in the future!
 
 ---
 
