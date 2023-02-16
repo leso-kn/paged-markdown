@@ -1,6 +1,12 @@
 [![Online Demo](https://img.shields.io/static/v1?label=Demo&message=View%20in%20Browser&color=blueviolet)](https://lesosoftware.com/paged-markdown-doc-demo.pdf)
 
+# ⭐️ Update
+
+[Paged Markdown 3](https://github.com/leso-kn/paged-markdown-3) is the latest version of the Paged Markdown document format for scientific writing. It comes with a simplified syntax, lots of improvements and new features.
+
 # Paged Markdown
+
+_This is version 1 of the document format. It is still suitable for [creating slide based presentations](https://github.com/leso-kn/paged-markdown). For scientific writing however, Paged Markdown 3 is recommended (see the above message)._
 
 ## \> Text Document Flavor
 
